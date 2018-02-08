@@ -136,6 +136,8 @@ if [ -f "$HOME/.dircolors" ] ; then
     eval "$(dircolors "$HOME/.dircolors")"
 fi
 
+# GPG settings
+export GPG_TTY=$(tty)
 
 ###############################
 #           ALIASES           #
