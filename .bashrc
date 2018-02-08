@@ -234,7 +234,7 @@ fl() {
     find -L . -name '*'"$name"'*' "$@"
 }
 
-alias d='docker'
+#alias d='docker'
 
 # Disk use sorted, process list
 alias dus='du -shm * .[^.]* | sort -n'
@@ -252,8 +252,8 @@ alias sls='screen -ls'
 alias sr='screen -r'
 
 # Docker
-alias dr='docker run -ti'
-alias di='docker images'
+#alias dr='docker run -ti'
+#alias di='docker images'
 
 # Handy prefixes
 #alias left='DISPLAY=:0.0'

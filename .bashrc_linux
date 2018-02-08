@@ -12,15 +12,21 @@ fi
 
 # Source Box-specific config
 case $(hostname) in
-    'neon') # Slacker config
+    'neon') # Neon config
 	source ~/.bashrc_neon
 	;;
-    'OlewaczersNAS') # Blinker config
+    'OlewaczersNAS') # NAS config
 	source ~/.bashrc_nas
 	;;
-#    'kollok.org') # Kollok config
-#	source ~/.bashrc_kollok
-#	;;
+    'stereo') 
+	source ~/.bashrc_stereo
+	;;
+    'cobalt') 
+	source ~/.bashrc_cobalt
+	;;
+    'ferrum') 
+	source ~/.bashrc_ferrum
+	;;
 esac
 
 # Vim setting for "e" alias

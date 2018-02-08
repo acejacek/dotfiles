@@ -1,0 +1,6 @@
+
+export L_PS1_HOST_COLOR=35
+
+# System
+#alias suspend='~/git/scripts/linux/os_suspend.sh'
+
