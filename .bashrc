@@ -65,8 +65,9 @@ function __rc_prompt_command() {
     PS1=""
     PS1+="$job_count_prompt"
     [[ -n $VIRTUAL_ENV ]] && PS1+="${C_VENV}(venv)${C_RST} "
-    PS1+="${C_GIT}$(__git_ps1 "(%s) ")${C_USER}\u:${C_RST}"
-    PS1+="${C_DATE}$(date +%H:%M)${C_BLUE}${_P_SSH} ${PS_EXIT}${C_BLUE}\w ${C_RST}"
+    PS1+="${C_GIT}$(__git_ps1 "(%s) ")${C_USER}\u@\h${C_RST}"
+#    PS1+="${C_DATE}$(date +%H:%M)${C_BLUE}${_P_SSH} ${PS_EXIT}${C_BLUE}\w ${C_RST}"
+    PS1+="${C_BLUE}${_P_SSH} ${PS_EXIT}${C_BLUE}\w ${C_RST}"
 
     # Z (autojump like thing) - defined in other .bashrc_xxx
     "$L_Z_PROMPT_CMD" --add "$(command pwd -P 2>/dev/null)" 2>/dev/null

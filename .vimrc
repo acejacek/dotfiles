@@ -65,6 +65,10 @@ if has("gui_running") " GUI mode
 
     colorscheme molokai
 
+    " Highlight current line, no underline/bold/whatnot
+    set cursorline
+    hi CursorLine cterm=NONE term=NONE
+
     if g:PLATFORM =~ "win"
         set guifont=Terminus:h12
     elseif g:PLATFORM =~ "mac"
@@ -80,12 +84,12 @@ else
     set termencoding=utf-8
     if g:PLATFORM =~ "mac"
         set t_ZH=[3m t_ZR=[23m " Set the italics code
+        " Highlight current line, no underline/bold/whatnot
+        set cursorline
+        hi CursorLine cterm=NONE term=NONE
     endif
 endif
 
-" Highlight current line, no underline/bold/whatnot
-set cursorline
-hi CursorLine cterm=NONE term=NONE
 
 " Orgmode multi-star should show only last star
 hi link org_shade_stars NonText
