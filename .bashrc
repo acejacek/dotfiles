@@ -8,14 +8,14 @@
 # Default values defined in system-specific rc-files - "L_" for "LOCAL"
 [[ -z "$(which vim)" ]] && export L_VIM="vi" || export L_VIM="vim"
 
-export L_PS1_HOST_COLOR="46" # Green by default
+export L_PS1_HOST_COLOR="44" # Green by default
 export L_PS1_ALREADY_SET=""
 
 # Load OS-specific rc files
 #
 if [[ "$(uname)" == 'Darwin' ]]; then # Leopard
     source ~/.bashrc_mac
-elif [[ "$(uname)" == 'Linux' ]]; then # Linux (slacker / kollok)
+elif [[ "$(uname)" == 'Linux' ]]; then # Linux
     source ~/.bashrc_linux
 fi
 
@@ -143,21 +143,13 @@ fi
 # Summary: cd, ls, t[a] (tree), mkcd, ,, (cd ..), e (edit), f, g gi gr gri (grep), lna, sr, sls
 
 ## Bookmarks
-alias cdjf='cd ~/git/site_espira/jf'
-alias cdj2='cd ~/git/site_chinafrique/src'
-alias cdjj='cd ~/sites/jj/code'
-alias cdts='cd ~/git/ts.git/src'
-alias cdsp='cd ~/git/site_sportsclub/sportsclub/club'
-alias cdts='cd ~/git/ts/src'
-
-
 alias cdms='cd ~/Media/series'
 alias cdmf='cd ~/Media/films'
 alias cdma='cd ~/Media/animes'
 alias cdmm='cd ~/Media/music_new'
 
 # Git bookmarks begin with cdg
-alias cdgd='cd ~/git/perso_dotfiles'
+alias cdgd='cd ~/dotfiles'
 
 # gradle
 gw() { # Run gradle if found in the current or parent directories
@@ -252,9 +244,6 @@ alias unismall='unison small_data'
 alias unibig='unison big_data'
 alias unifull='unismall && unibig'
 
-# Taskwarrior
-alias t='task'
-
 # Screen
 alias sls='screen -ls'
 alias sr='screen -r'
@@ -264,8 +253,8 @@ alias dr='docker run -ti'
 alias di='docker images'
 
 # Handy prefixes
-alias left='DISPLAY=:0.0'
-alias right='DISPLAY=:0.1'
+#alias left='DISPLAY=:0.0'
+#alias right='DISPLAY=:0.1'
 
 # Editor related
 alias e="$L_VIM"
@@ -287,26 +276,14 @@ alias vimv="e ~/.vimrc"
 ############################
 
 # SSH
-alias k='ssh sitaktif@kollok.org'
-alias k2='ssh sitaktif@uk.kollok.org -p443'
-alias sshs='ssh stalker'
-alias sshg='ssh gamer'
-alias sshm='ssh mickey'
-alias sshp='ssh chossart2006@perso.iiens.net'
-alias sshp2='ssh -p 443 chossart2006@perso.iiens.net'
-alias sshr='ssh -l rchossart'
-alias ssha='ssh rchossart@theisland.acunu.com' # Ssh Acunu VPN
+alias sshn='ssh neon' # Ssh Acunu VPN
 
 # Lftp
-alias jjftp='lftp jeanjolly@ftp4.phpnet.org'
 
 # MPD
 alias mpds="mpd --no-daemon &"
 alias mpdk="mpd --kill"
 alias mpdr="mpdk && mpds"
-
-# AndroiD
-alias adencode='~/scripts/android/encode_to_mp4.sh low'
 
 # Other
 alias restore_vim_session='vim $(find . -name ".*.swp" | while read f; do rm "$f"; echo "$f" | sed "s/\\.\\([^/]*\\).swp/\\1/"; done)'
