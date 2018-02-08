@@ -14,6 +14,3 @@ export L_PS1_HOST_COLOR=166
 #           ALIASES           #
 ###############################
 
-alias jjftp='lftp jeanjolly@ftp4.phpnet.org'
-
-alias irc='screen -Rd -S irc weechat-curses'

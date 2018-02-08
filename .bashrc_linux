@@ -12,15 +12,15 @@ fi
 
 # Source Box-specific config
 case $(hostname) in
-    'slacker') # Slacker config
-	source ~/.bashrc_slacker
+    'neon') # Slacker config
+	source ~/.bashrc_neon
 	;;
-    'blinker') # Blinker config
-	source ~/.bashrc_blinker
+    'OlewaczersNAS') # Blinker config
+	source ~/.bashrc_nas
 	;;
-    'kollok.org') # Kollok config
-	source ~/.bashrc_kollok
-	;;
+#    'kollok.org') # Kollok config
+#	source ~/.bashrc_kollok
+#	;;
 esac
 
 # Vim setting for "e" alias
@@ -39,14 +39,8 @@ alias aps='sudo aptitude search'
 alias ack="$__ACK"
 
 # Prefixes
-alias luit_iso='luit -encoding ISO 8859-15'
+#alias luit_iso='luit -encoding ISO 8859-15'
 
 # Shortcuts
 alias cdapen='cd /etc/apache2/sites-enabled'
 alias cdapav='cd /etc/apache2/sites-available'
-
-alias cdpysite='cd /usr/local/lib/python2.6/site-packages'
-alias cddjango='cd /usr/local/lib/python2.6/site-packages/django'
-
-# Kollok stream
-alias kstream="vlc qtcapture:// --sout='#transcode{vcodec=theo,vb=200,scale=0.5,acodec=none}:std{access=shout,mux=ogg,dst=source:bite@10.7.0.1:8000/sitaktif.ogg}'"
