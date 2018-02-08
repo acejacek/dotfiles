@@ -8,11 +8,32 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let g:Powerline_symbols = 'unicode'
+" let g:Powerline_symbols = 'fancy'
+
 " File types and coloration have to be set here
 syntax on
 filetype plugin on
 filetype indent on
 set background=dark
+
+:nmap \l :setlocal number!<CR>
+:nmap \o :set paste!<CR>
+:cnoremap <C-a>  <Home>
+:cnoremap <C-b>  <Left>
+:cnoremap <C-f>  <Right>
+:cnoremap <C-d>  <Delete>
+:cnoremap <M-b>  <S-Left>
+:cnoremap <M-f>  <S-Right>
+:cnoremap <M-d>  <S-right><Delete>
+:cnoremap <Esc>b <S-Left>
+:cnoremap <Esc>f <S-Right>
+:cnoremap <Esc>d <S-right><Delete>
+:cnoremap <C-g>  <C-c>
+:nmap <C-e> :e#<CR>
+
+:nmap <C-n> :bnext<CR>
+:nmap <C-p> :bprev<CR>
 
 "}}}
 
@@ -88,39 +109,17 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" General plugins
-Plugin 'tpope/vim-surround'
-Plugin 'kana/vim-fakeclip'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-obsession'
-Plugin 'sitaktif/vim-space'
-Plugin 'git://github.com/majutsushi/tagbar'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'godlygeek/tabular'
-Plugin 'rking/ag.vim'
-Plugin 'rizzatti/dash.vim'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating' " Increase/decrease date with <C-a>/<C-x>
-Plugin 'tpope/vim-unimpaired'
-
 " Color
 Plugin 'scwood/vim-hybrid'
+Plugin 'altercation/vim-colors-solarized'
 
-" FT Plugins
-" Plugin 'scrooloose/syntastic'
-Plugin 'neomake/neomake'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'kballard/vim-swift'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'kylef/apiblueprint.vim'
+" Status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-" Python
-Plugin 'alfredodeza/pytest.vim'
-Plugin 'python-rope/ropevim'
-Plugin 'davidhalter/jedi-vim'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 "  }}}
 
@@ -304,10 +303,10 @@ nnoremap <bs> :bp<cr>
 
 " Use arrows to move the screen (not the cursor).
 " Cursor should be moved with hjkl.
-noremap <up> 10<c-y>
-noremap <down> 10<c-e>
-noremap <left> 10zh
-noremap <right> 10zl
+"noremap <up> 10<c-y>
+"noremap <down> 10<c-e>
+"noremap <left> 10zh
+"noremap <right> 10zl
 
 
 " Beginners that want to have a good habit
@@ -345,8 +344,7 @@ noremap <leader>sw :set wrap!<cr>
 noremap <leader>st :setlocal spell! spelllang=en spellcapcheck=<cr>
 noremap <leader>sc :setlocal nospell<cr>
 noremap <leader>se :setlocal spell spelllang=en spellcapcheck=<cr>
-noremap <leader>sf :setlocal spell spelllang=fr spellcapcheck=<cr>
-noremap <leader>sd :setlocal spell spelllang=de spellcapcheck=<cr>
+noremap <leader>sp :setlocal spell spelllang=pl spellcapcheck=<cr>
 
 " Vim
 noremap <leader>vev :e ~/.vimrc<cr>
@@ -464,10 +462,10 @@ com! XMLClean 1,$!xmllint --format -
 " ---| INCLUDES |--- {{{
 
 " Plugin-dependant settings
-exec 'source ' . s:config_path . '/sitaktif/plugin_vimrc.vim'
+"exec 'source ' . s:config_path . '/sitaktif/plugin_vimrc.vim'
 
 " Autocorrections
-exec 'source ' . s:config_path . '/sitaktif/autocorrect_fr_vimrc.vim'
-exec 'source ' . s:config_path . '/sitaktif/autocorrect_en_vimrc.vim'
+"exec 'source ' . s:config_path . '/sitaktif/autocorrect_fr_vimrc.vim'
+"exec 'source ' . s:config_path . '/sitaktif/autocorrect_en_vimrc.vim'
 
 "}}}

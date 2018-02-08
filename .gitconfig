@@ -2,8 +2,8 @@
     sslVerify = false
 
 [user]
-    name = Romain Chossart
-    email = romainchossart@gmail.com
+    name = aceJacek
+    email = acejacek@gmail.com
 
 [core]
     excludesfile = ~/.gitexclude
