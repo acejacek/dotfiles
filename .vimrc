@@ -113,6 +113,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" CtrlP
+Plugin 'ctrlpvim/ctrlp.vim'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Color
 Plugin 'scwood/vim-hybrid'
 Plugin 'altercation/vim-colors-solarized'

@@ -274,6 +274,8 @@ alias vimz="e ~/.zshrc"
 alias soz="source ~/.zshrc"
 alias vimv="e ~/.vimrc"
 
+alias ctags="ctags -R --totals=yes"
+
 ############################
 #        BOOKMARKS         #
 ############################
