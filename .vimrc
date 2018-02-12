@@ -124,7 +124,8 @@ Plugin 'altercation/vim-colors-solarized'
 " Status line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+let g:airline#extensions#tabline#enabled = 1    "add smart tabs line
+let g:airline_powerline_fonts = 1
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -180,6 +181,12 @@ set hidden "To move between buffers without writing them.  Don't :q! or :qa! fri
 " Command mode options
 set wildmenu "Completions view in ex mode (super useful !)
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.ps,*.pdf,*.cmo,*.cmi,*.cmx "Don't complete bin files
+set wildignore+=*.ico,*.gif,*.jpg,*.png,*.jpeg
+set wildignore+=.DS_Store,*.git
+set wildignore+=*~,*.swp,*.tmp
+
+set nobackup nowritebackup "I don't need backups
+
 set cmdheight=1 "Command line height
 set laststatus=2 "When to show status line (2=always)
 " Set statusline - silently fail if vim lacks version / plugins
