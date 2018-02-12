@@ -8,7 +8,7 @@
 # 3- all the other files will be symlinked directly in the home
 
 # Ignore these
-cfg_ignore=("CONFIG" "README.md" "bin" "todo"	# This repo
+cfg_ignore=("CONFIG" "CONFIG.example" "README.md" "bin" "todo"	# This repo
 	".git" ".gitignore" ".gitmodules"	# Git
 	"*.orig" "*.rej"			# Patch residues
 	".*.swp" "*~" "\#*\#"			# Vim/Emacs
@@ -26,4 +26,4 @@ cfg_dest_dir=/home/sitaktif
 # cfg_dest_dir.
 # E.g: If cfg_dest_dir is /home/foo and the dotfiles directory is in
 # /home/foo/git/dotfiles, then you should put "git/dotfiles" in there.
-cfg_dotfiles_relative_path="git/dotfiles"
+cfg_dotfiles_relative_path="dotfiles"
