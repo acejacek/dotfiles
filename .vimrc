@@ -121,11 +121,24 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 Plugin 'scwood/vim-hybrid'
 Plugin 'altercation/vim-colors-solarized'
 
+" https://github.com/tpope/vim-fugitive
+Plugin 'tpope/vim-fugitive.git'
+
 " Status line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1    "add smart tabs line
 let g:airline_powerline_fonts = 1
+
+"default values:
+let g:airline#extensions#syntastic#enabled = 1 "enable/disable syntastic integration
+let airline#extensions#syntastic#error_symbol = 'E:' "syntastic error_symbol
+let airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}' "syntastic statusline error format (see |syntastic_stl_format|)
+let airline#extensions#syntastic#warning_symbol = 'W:'  "syntastic warning
+let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}' "syntastic statusline warning format (see |syntastic_stl_format|)
+
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
