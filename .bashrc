@@ -153,6 +153,7 @@ alias cdmm='cd ~/Media/music_new'
 
 # Git bookmarks begin with cdg
 alias cdgd='cd ~/dotfiles'
+alias cdg='cd ~/git'
 
 # gradle
 gw() { # Run gradle if found in the current or parent directories
@@ -281,9 +282,13 @@ alias ctags="ctags -R --totals=yes"
 ############################
 
 # SSH
-alias sshn='ssh neon' # Ssh Acunu VPN
+alias sshn='ssh neon'
+alias sshg='ssh galium'
+alias sshc='ssh cobalt'
 
-# Lftp
+# apt
+alias aptu="sudo apt-get update"
+alias aptg="sudo apt-get upgrade"
 
 # MPD
 alias mpds="mpd --no-daemon &"
